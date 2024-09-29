@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(222, 203, 229);
+    color: black;
+    font-family: "Fira Sans", sans-serif;
+    background-color: rgb(231, 194, 226);
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: #8cc099;
+}
+
+nav .heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: rgb(153, 175, 206);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav .sideMenuButton {
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive navbar css */
+@media screen and (max-width: 600px) {
+    nav .sideMenuButton {
+        display: flex;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    .sideNavigationBar {
+        display: block !important;
+    }
+}
+
+.sideNavigationBar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    background-color: rgb(125, 156, 202);
+    overflow-x: hidden;
+    transition: 0.3s ease-in;
+    padding-top: 60px;
+    display: none;
+}
+
+.sideNavigationBar a {
+    padding: 8px 8px 8px 40px;
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    color: #d1d1d1;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sideNavigationBar a button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: green;
+    font-size: 16px;
+    border-style: none;
+    font-weight: 700;
+}
+
+.sideNavigationBar a:hover {
+    color: white;
+}
+
+.sideNavigationBar .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+.line .side1 {
+    padding-right: 50px;
+}
+
+.side1 h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.side1 button {
+    width: 200px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border-style: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Header content responsive */
+@media screen and (max-width: 980px) {
+    .side2 img {
+        width: 350px;
+    }
+
+    .side1 h1 {
+        font-size: 40px;
+    }
+
+    .side1 p {
+        font-size: 17px;
+    }
+
+    .line {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .side1 h1 {
+        font-size: 35px;
+    }
+
+    .line {
+        flex-direction: column;
+    }
+
+    .line .side1 {
+        padding: 30px;
+    }
+}
+
+/* section */
+
+section .topic a {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .boxes .box {
+    margin: 10px 20px;
+    max-width: calc(100% / 3 - 50px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+}
+
+/* Contact Page  */
+
+.contact {
+    padding: 20px;
+}
+
+.contact .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.content .title {
+    width: 80%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.title {
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+
+.contactMenu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input2 {
+    margin-top: 10;
+}
+
+.label1 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
+
+.contactMenu .input1 input {
+    border-radius: 13px;
+    padding: 6px;
+}
+ē
+.input2 input {
+    border-color: rgb(252, 244, 244);
+    width: 400px;
+}
+
+.button {
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.button button {
+    width: 162px;
+    height: 35px;
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+.button button:hover {
+    background-color: #8cc099;
+}
+
+button {
+    width: 162px;
+    height: 35px;
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+button:hover {
+    background-color: #8cc099;
+}
+
+.rightside1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+}
+
+.title1 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.content1 {
+    width: 450px;
+    margin-top: 2px;
+    color: grey;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    padding: 15px 0;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+footer .footer span {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+footer .footer span a {
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+footer .footer span a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1060px) {
+    .contactMenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightside1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .content1 {
+        width: 100%;
+        margin-top: 2px;
+        color: rgb(1, 26, 90);
+    }
+
+    .side2 img {
+        width: 95%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .side2 img {
+        width: 100%;
+    }
+
+    section .topic a {
+        font-size: 20px;
+    }
+
+    section .topic p {
+        font-size: 5px;
+    }
+
+    .about .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .boxes .box {
+        max-width: 70%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="heading">
+            Landing Page</div>
+        <span class="sideMenuButton" 
+            onclick="openNavbar()">
+        </span>
+        <div class="navbar">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Sign Up">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sideNavigationBar" 
+        id="sideNavigationBar">
+        <a href="#" class="closeButton" 
+            onclick="closeNavbar()">
+        </a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Sign Up</a>
+    </div>
+
+    <!-- Content -->
+    <div class="line" id="Home">
+        <div class="side1">
+            <h1>OASIS INFOBYTE</h1>
+            <h2>LANDING PAGE</h2>
+            <button>
+                <a href=
+"https://oasisinfobyte.com/">
+                    Explore More
+                </a>
+            </button>
+        </div>
+        <div class="side2">
+            <img src=oasis_infobyte_logo.jpg
+                width="400px">
+        </div>
+    </div>
+
+    <section class="about" id="My Projects">
+        <div class="line" id="About"> 
+        <div class="content">
+            <div class="title">
+                <span>INTERNSHIPS</span>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="topic">
+                        <a href="" target="_blank">
+                            <h3>WEB DEVELOPMENT AND DESIGN</h3>
+                        </a>
+                    </div>
+                    <p>
+                        <img src="Website_illustration_jpg_6PA9rpLF.avif" alt="logo"
+                        width="400px"><br>
+                           <h4>The intern is expected to use knowledge learned in their classes in their major. In the case of web design,
+                         the intern would be expected to use their design knowledge to complete beginner tasks for the company.</h4> 
+                    </p>
+                </div>
+                <div class="box">
+
+                    <div class="topic">
+                        <a href="" target="_blank">
+                          <h3>ANDROID APP DEVELOPMENT</h3> 
+                        </a>
+                    </div>
+                    <p>
+                        <img src="android-app-development-service.png" alt="logo"
+                        width="400px"><br>
+                           <h4>Android app courses may vary in length, subject, and level of skill, but may cover the following topics: Fundamentals of computer science and programming.
+                         Concepts such as abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development.</h4> 
+                    </p>
+                </div>
+
+                <div class="box">
+                    <div class="topic">
+                        <a href="" target="_blank">
+                            <h3>JAVA DEVELOPMENT</h3> 
+                        </a>
+                    </div>
+                    <p>
+                        <img src="0_3Xbtyqa4pXY-7F5G.png" alt="logo"
+                        width="400px"><br>
+                           <h4>A Java internship is a program designed to provide students and recent graduates with practical experience
+                            in software development using the Java programming language.</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Sign Up" id="contact">
+        <div class="line" id="Sign Up"> 
+        <div class="content">
+            <div class="title"><span>Sign Up</span></div>
+            <div class="contactMenu">
+                <div class="input1">
+                    <div class="label1">Your Name</div>
+                    <div class="input2">
+                        <input type="text" 
+                            placeholder="Enter your Name here">
+                    </div>
+                    <div class="label1">
+                        <label>Your Email</label>
+                    </div>
+                    <div class="input2">
+                        <input type="text" 
+                            placeholder="Enter your Email here">
+                    </div>
+                    <div class="label1">
+                        <label>Your Password</label>
+                    </div>
+                    <div class="input2">
+                        <input type="text" 
+                            placeholder="Enter your Password here">
+                    </div>
+                    <div class="button">
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+                <div class="input3">
+                    <div class="rightside1">
+                        <div class="title1">
+                            <span>
+                                Contact Us
+                            </span>
+                        </div>
+                        <div class="content1">
+                            contact@Oasisinfobyte.in<br>
+                            satya Niketan,South west New Delhi,India-110021
+                        </div>
+                        <div class="title1">
+                            <span>More Information</span>
+                        </div>
+                        <div class="content1">
+                            Our website developers provide expert web application development and web design services to our clients.
+                             OASIS INFOBYTE offers a variety of website design and development services,
+                             We specialize in developing interactive, scalable, brand-oriented, and business-ready custom web solutions!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <span>
+                Created By
+                <a href="https://www.linkedin.com/in/smrutisudha-priyadarshani-behera-027a35284/" 
+                    target="_blank">
+                    SMRUTISUDHA
+                </a>
+            </span>
+        </div>
+    </footer>
+    <script>
+        function openNavbar() {
+    document.getElementById("sideNavigationBar")
+        .style.width = "50%";
+}
+function closeNavbar() {
+    document.getElementById("sideNavigationBar")
+        .style.width = "0%";
+}
+    </script>
+</body>
+
+</html>
